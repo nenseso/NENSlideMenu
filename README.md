@@ -14,3 +14,4 @@ slideManager.targetEdge = UIRectEdgeLeft;
 // 4.设置侧滑栏的宽度
 slideManager.MenuWidth = 270;
 ```
+现在当我们执行presentViewController 即可modal出侧滑栏控制器。
