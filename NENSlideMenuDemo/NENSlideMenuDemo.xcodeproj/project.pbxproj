@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3531270AC5993AD0248C724A /* libPods-NENSlideMenuDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 103E6B3578598BECF1A9C402 /* libPods-NENSlideMenuDemoTests.a */; };
+		63C06B8B861878D429AD6A30 /* libPods-NENSlideMenuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39ACF00A9B425D01230404F1 /* libPods-NENSlideMenuDemo.a */; };
 		7E6E04CB213E856E00276101 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04CA213E856E00276101 /* AppDelegate.m */; };
 		7E6E04CE213E856E00276101 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04CD213E856E00276101 /* ViewController.m */; };
 		7E6E04D1213E856E00276101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E04CF213E856E00276101 /* Main.storyboard */; };
@@ -15,12 +17,8 @@
 		7E6E04D9213E856E00276101 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04D8213E856E00276101 /* main.m */; };
 		7E6E04E3213E856F00276101 /* NENSlideMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04E2213E856F00276101 /* NENSlideMenuDemoTests.m */; };
 		7E6E04EE213E856F00276101 /* NENSlideMenuDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04ED213E856F00276101 /* NENSlideMenuDemoUITests.m */; };
-		7E6E0506213E859700276101 /* SlideTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04FD213E859700276101 /* SlideTransitionAnimator.m */; };
-		7E6E0507213E859700276101 /* NENSlideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04FE213E859700276101 /* NENSlideManager.m */; };
-		7E6E0508213E859700276101 /* SlideCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E0500213E859700276101 /* SlideCustomPresentationController.m */; };
-		7E6E0509213E859700276101 /* SlideTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E0501213E859700276101 /* SlideTransitionDelegate.m */; };
-		7E6E050A213E859700276101 /* SlideTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E0504213E859700276101 /* SlideTransitionInteractionController.m */; };
 		7E6E050D213E85B100276101 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E050C213E85B100276101 /* MenuViewController.m */; };
+		CA39E8E1B059971FD645496E /* libPods-NENSlideMenuDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A5D5569A55B1C2FFFCDF98 /* libPods-NENSlideMenuDemoUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B2598FAB9DC47D23FE8BEC7 /* Pods-NENSlideMenuDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NENSlideMenuDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NENSlideMenuDemoTests/Pods-NENSlideMenuDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		103E6B3578598BECF1A9C402 /* libPods-NENSlideMenuDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NENSlideMenuDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39ACF00A9B425D01230404F1 /* libPods-NENSlideMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NENSlideMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		660736DDEBB59637D6FDE744 /* Pods-NENSlideMenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NENSlideMenuDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NENSlideMenuDemo/Pods-NENSlideMenuDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6FE4302FD7EB531334C2B0A5 /* Pods-NENSlideMenuDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NENSlideMenuDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NENSlideMenuDemoUITests/Pods-NENSlideMenuDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E6E04C6213E856E00276101 /* NENSlideMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NENSlideMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6E04C9213E856E00276101 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E6E04CA213E856E00276101 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,18 +60,12 @@
 		7E6E04E9213E856F00276101 /* NENSlideMenuDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NENSlideMenuDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6E04ED213E856F00276101 /* NENSlideMenuDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NENSlideMenuDemoUITests.m; sourceTree = "<group>"; };
 		7E6E04EF213E856F00276101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E6E04FC213E859700276101 /* SlideTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTransitionDelegate.h; sourceTree = "<group>"; };
-		7E6E04FD213E859700276101 /* SlideTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTransitionAnimator.m; sourceTree = "<group>"; };
-		7E6E04FE213E859700276101 /* NENSlideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NENSlideManager.m; sourceTree = "<group>"; };
-		7E6E04FF213E859700276101 /* SlideTransitionInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTransitionInteractionController.h; sourceTree = "<group>"; };
-		7E6E0500213E859700276101 /* SlideCustomPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideCustomPresentationController.m; sourceTree = "<group>"; };
-		7E6E0501213E859700276101 /* SlideTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTransitionDelegate.m; sourceTree = "<group>"; };
-		7E6E0502213E859700276101 /* NENSlideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NENSlideManager.h; sourceTree = "<group>"; };
-		7E6E0503213E859700276101 /* SlideTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTransitionAnimator.h; sourceTree = "<group>"; };
-		7E6E0504213E859700276101 /* SlideTransitionInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTransitionInteractionController.m; sourceTree = "<group>"; };
-		7E6E0505213E859700276101 /* SlideCustomPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideCustomPresentationController.h; sourceTree = "<group>"; };
 		7E6E050B213E85B100276101 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		7E6E050C213E85B100276101 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		828046A6480DBD9EB42D3B8F /* Pods-NENSlideMenuDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NENSlideMenuDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NENSlideMenuDemoUITests/Pods-NENSlideMenuDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9A5D5569A55B1C2FFFCDF98 /* libPods-NENSlideMenuDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NENSlideMenuDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B32C20CF6016A60887B1E9 /* Pods-NENSlideMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NENSlideMenuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NENSlideMenuDemo/Pods-NENSlideMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DCCD118DC188D8F1DD4810B4 /* Pods-NENSlideMenuDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NENSlideMenuDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NENSlideMenuDemoTests/Pods-NENSlideMenuDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C06B8B861878D429AD6A30 /* libPods-NENSlideMenuDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3531270AC5993AD0248C724A /* libPods-NENSlideMenuDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +89,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA39E8E1B059971FD645496E /* libPods-NENSlideMenuDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73B600246D8A59CCF46B1913 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3B32C20CF6016A60887B1E9 /* Pods-NENSlideMenuDemo.debug.xcconfig */,
+				660736DDEBB59637D6FDE744 /* Pods-NENSlideMenuDemo.release.xcconfig */,
+				DCCD118DC188D8F1DD4810B4 /* Pods-NENSlideMenuDemoTests.debug.xcconfig */,
+				0B2598FAB9DC47D23FE8BEC7 /* Pods-NENSlideMenuDemoTests.release.xcconfig */,
+				828046A6480DBD9EB42D3B8F /* Pods-NENSlideMenuDemoUITests.debug.xcconfig */,
+				6FE4302FD7EB531334C2B0A5 /* Pods-NENSlideMenuDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7E6E04BD213E856E00276101 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +116,8 @@
 				7E6E04E1213E856F00276101 /* NENSlideMenuDemoTests */,
 				7E6E04EC213E856F00276101 /* NENSlideMenuDemoUITests */,
 				7E6E04C7213E856E00276101 /* Products */,
+				73B600246D8A59CCF46B1913 /* Pods */,
+				7F2D9651DA054E572CF9C52F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,7 +140,6 @@
 				7E6E04CD213E856E00276101 /* ViewController.m */,
 				7E6E050B213E85B100276101 /* MenuViewController.h */,
 				7E6E050C213E85B100276101 /* MenuViewController.m */,
-				7E6E04FB213E859700276101 /* NENSlideMenu */,
 				7E6E04CF213E856E00276101 /* Main.storyboard */,
 				7E6E04D2213E856E00276101 /* Assets.xcassets */,
 				7E6E04D4213E856E00276101 /* LaunchScreen.storyboard */,
@@ -153,21 +167,14 @@
 			path = NENSlideMenuDemoUITests;
 			sourceTree = "<group>";
 		};
-		7E6E04FB213E859700276101 /* NENSlideMenu */ = {
+		7F2D9651DA054E572CF9C52F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7E6E04FC213E859700276101 /* SlideTransitionDelegate.h */,
-				7E6E0501213E859700276101 /* SlideTransitionDelegate.m */,
-				7E6E0503213E859700276101 /* SlideTransitionAnimator.h */,
-				7E6E04FD213E859700276101 /* SlideTransitionAnimator.m */,
-				7E6E0502213E859700276101 /* NENSlideManager.h */,
-				7E6E04FE213E859700276101 /* NENSlideManager.m */,
-				7E6E04FF213E859700276101 /* SlideTransitionInteractionController.h */,
-				7E6E0504213E859700276101 /* SlideTransitionInteractionController.m */,
-				7E6E0505213E859700276101 /* SlideCustomPresentationController.h */,
-				7E6E0500213E859700276101 /* SlideCustomPresentationController.m */,
+				39ACF00A9B425D01230404F1 /* libPods-NENSlideMenuDemo.a */,
+				103E6B3578598BECF1A9C402 /* libPods-NENSlideMenuDemoTests.a */,
+				A9A5D5569A55B1C2FFFCDF98 /* libPods-NENSlideMenuDemoUITests.a */,
 			);
-			path = NENSlideMenu;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E6E04F2213E856F00276101 /* Build configuration list for PBXNativeTarget "NENSlideMenuDemo" */;
 			buildPhases = (
+				7BB416AD42B274B3C966BA19 /* [CP] Check Pods Manifest.lock */,
 				7E6E04C2213E856E00276101 /* Sources */,
 				7E6E04C3213E856E00276101 /* Frameworks */,
 				7E6E04C4213E856E00276101 /* Resources */,
+				A169789F5ED10968CD6529FE /* [CP] Embed Pods Frameworks */,
+				99DB70ABE2BBD583CC2BCF03 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E6E04F5213E856F00276101 /* Build configuration list for PBXNativeTarget "NENSlideMenuDemoTests" */;
 			buildPhases = (
+				2E50F7452C356B1A6A4EA9D2 /* [CP] Check Pods Manifest.lock */,
 				7E6E04DA213E856F00276101 /* Sources */,
 				7E6E04DB213E856F00276101 /* Frameworks */,
 				7E6E04DC213E856F00276101 /* Resources */,
+				D40DCCA66FFBB29751841695 /* [CP] Embed Pods Frameworks */,
+				39ADE49C0F3727899FC72E50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E6E04F8213E856F00276101 /* Build configuration list for PBXNativeTarget "NENSlideMenuDemoUITests" */;
 			buildPhases = (
+				2594E3B5C70D77AB143CB0DE /* [CP] Check Pods Manifest.lock */,
 				7E6E04E5213E856F00276101 /* Sources */,
 				7E6E04E6213E856F00276101 /* Frameworks */,
 				7E6E04E7213E856F00276101 /* Resources */,
+				5AB142195F32CF68C9776F2E /* [CP] Embed Pods Frameworks */,
+				7E9D4D8DDBE73025D2D90E79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,20 +311,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2594E3B5C70D77AB143CB0DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NENSlideMenuDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E50F7452C356B1A6A4EA9D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NENSlideMenuDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39ADE49C0F3727899FC72E50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NENSlideMenuDemoTests/Pods-NENSlideMenuDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AB142195F32CF68C9776F2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NENSlideMenuDemoUITests/Pods-NENSlideMenuDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BB416AD42B274B3C966BA19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NENSlideMenuDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E9D4D8DDBE73025D2D90E79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NENSlideMenuDemoUITests/Pods-NENSlideMenuDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99DB70ABE2BBD583CC2BCF03 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NENSlideMenuDemo/Pods-NENSlideMenuDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A169789F5ED10968CD6529FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NENSlideMenuDemo/Pods-NENSlideMenuDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D40DCCA66FFBB29751841695 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NENSlideMenuDemoTests/Pods-NENSlideMenuDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E6E04C2213E856E00276101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E6E0509213E859700276101 /* SlideTransitionDelegate.m in Sources */,
 				7E6E050D213E85B100276101 /* MenuViewController.m in Sources */,
-				7E6E050A213E859700276101 /* SlideTransitionInteractionController.m in Sources */,
-				7E6E0508213E859700276101 /* SlideCustomPresentationController.m in Sources */,
 				7E6E04CE213E856E00276101 /* ViewController.m in Sources */,
 				7E6E04D9213E856E00276101 /* main.m in Sources */,
 				7E6E04CB213E856E00276101 /* AppDelegate.m in Sources */,
-				7E6E0507213E859700276101 /* NENSlideManager.m in Sources */,
-				7E6E0506213E859700276101 /* SlideTransitionAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +635,7 @@
 		};
 		7E6E04F3213E856F00276101 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B32C20CF6016A60887B1E9 /* Pods-NENSlideMenuDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +653,7 @@
 		};
 		7E6E04F4213E856F00276101 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 660736DDEBB59637D6FDE744 /* Pods-NENSlideMenuDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -511,6 +671,7 @@
 		};
 		7E6E04F6213E856F00276101 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCCD118DC188D8F1DD4810B4 /* Pods-NENSlideMenuDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +690,7 @@
 		};
 		7E6E04F7213E856F00276101 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B2598FAB9DC47D23FE8BEC7 /* Pods-NENSlideMenuDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +709,7 @@
 		};
 		7E6E04F9213E856F00276101 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 828046A6480DBD9EB42D3B8F /* Pods-NENSlideMenuDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NENSlideMenuDemoUITests/Info.plist;
@@ -564,6 +727,7 @@
 		};
 		7E6E04FA213E856F00276101 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FE4302FD7EB531334C2B0A5 /* Pods-NENSlideMenuDemoUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NENSlideMenuDemoUITests/Info.plist;

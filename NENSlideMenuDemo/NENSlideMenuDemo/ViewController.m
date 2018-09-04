@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "NENSlideManager.h"
+#import <NENSlideManager.h>
 @interface ViewController ()
 @property (nonatomic, strong) NENSlideManager *slideManager;
 @end
