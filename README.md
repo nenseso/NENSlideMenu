@@ -2,7 +2,7 @@
 * 使用 
 ####CocoaPods
 
-![NENSlideMenu] (https://github.com/nenseso/NENSlideMenu/blob/master/1.gif)
+![NENSlideMenu](https://github.com/nenseso/NENSlideMenu/blob/master/1.gif)
 
 ```
 pod 'NENSlideMenu', '~> 1.0.1'
