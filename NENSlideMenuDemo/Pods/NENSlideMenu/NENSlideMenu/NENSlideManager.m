@@ -32,6 +32,7 @@
         self.transitionDelegate = [[SlideTransitionDelegate alloc] initWithPresentedViewController:self.presentedViewController presentingViewController:self.presentingViewController];
         menuViewController.transitioningDelegate = self.transitionDelegate;
         self.targetEdge = UIRectEdgeLeft;
+        self.MenuWidth = [UIScreen mainScreen].bounds.size.width;
         [self addGestures];
     }
     return self;

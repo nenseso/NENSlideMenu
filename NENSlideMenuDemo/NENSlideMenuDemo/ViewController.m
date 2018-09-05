@@ -25,7 +25,7 @@
     NENSlideManager *slideManager = [[NENSlideManager alloc] initWithMenuController:destinationVC mainController:self];
     // 确保它不是临时变量
     self.slideManager = slideManager;
-    slideManager.MenuWidth = 270;
+//    slideManager.MenuWidth = 270;
 }
 
 - (IBAction)unwindSegue:(UIStoryboardSegue *)sender{

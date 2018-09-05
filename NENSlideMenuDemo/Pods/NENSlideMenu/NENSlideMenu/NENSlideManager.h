@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Menu出来的位置,默认是UIRectEdgeLeft
 @property (nonatomic, readwrite) UIRectEdge targetEdge;
-// Menu的宽度
+// Menu的宽度,默认是屏幕宽度
 @property (nonatomic, readwrite) CGFloat MenuWidth;
 
 @end
