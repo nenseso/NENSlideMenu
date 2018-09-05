@@ -1,9 +1,10 @@
 # NENSlideMenu
-* 使用 
-####CocoaPods
 
 ![NENSlideMenu](https://github.com/nenseso/NENSlideMenu/blob/master/1.gif)
 
+* 使用
+
+####CocoaPods
 ```
 pod 'NENSlideMenu', '~> 1.0.1'
 ```
