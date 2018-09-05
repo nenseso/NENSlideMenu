@@ -1,8 +1,11 @@
 # NENSlideMenu
 * 使用 
 ####CocoaPods
+
+![NENSlideMenu] (https://github.com/nenseso/NENSlideMenu/blob/master/1.gif)
+
 ```
-pod 'NENSlideMenu', '~> 1.0.0'
+pod 'NENSlideMenu', '~> 1.0.1'
 ```
 ```
 // 1.在主控制器中创建
