@@ -6,7 +6,7 @@
 
 ####CocoaPods
 ```
-pod 'NENSlideMenu', '~> 1.0.1'
+pod 'NENSlideMenu'
 ```
 ```
 // 1.在主控制器中创建
