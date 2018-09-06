@@ -15,7 +15,7 @@ NENSlideManager *slideManager = [[NENSlideManager alloc] initWithMenuController:
 self.slideManager = slideManager;
 // 3.设置侧滑栏的初始位置
 slideManager.targetEdge = UIRectEdgeLeft;
-// 4.设置侧滑栏的宽度
+// 4.设置侧滑栏的宽度，如果不设置，默认是屏幕宽度
 slideManager.MenuWidth = 270;
 ```
 现在当我们执行presentViewController 即可modal出侧滑栏控制器。
