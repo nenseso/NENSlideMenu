@@ -7,7 +7,7 @@
 //
 
 #import "SlideTransitionDelegate.h"
-#import "SlideTransitionAnimator.h"
+
 #import "SlideTransitionInteractionController.h"
 #import "SlideCustomPresentationController.h"
 
@@ -15,30 +15,57 @@
 
 @property (nonatomic, strong) UIViewController *presentedViewController;
 @property (nonatomic, strong) UIViewController *presentingViewController;
+@property (nonatomic, assign) UINavigationControllerOperation operation;
 
 @end
 
 @implementation SlideTransitionDelegate
 
-- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController
+- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController transitonType:(SlideTransitionType)transitionType
 {
     self = [super init];
     if (self) {
-        presentedViewController.modalPresentationStyle = UIModalPresentationCustom;
+        _transitionType = transitionType;
+        if (self.transitionType == SlideTransitionTypeModal) {
+            presentedViewController.modalPresentationStyle = UIModalPresentationCustom;
+        }
         self.presentedViewController = presentedViewController;
         self.presentingViewController = presentingViewController;
     }
     return self;
 }
 
+#pragma mark - UINavigationControllerDelegate
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    self.operation = operation;
+    if (operation == UINavigationControllerOperationPush) {
+        return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.presentTargetEdge transitionType:self.transitionType];
+    } else if (operation == UINavigationControllerOperationPop) {
+        return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.dismissTargetEdge transitionType:self.transitionType];
+    }
+    return nil;
+}
+
+- (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController
+{
+    UIRectEdge edge = self.operation == UINavigationControllerOperationPush ? self.presentTargetEdge : self.dismissTargetEdge;
+    if (self.gestureRecognizer.state == UIGestureRecognizerStateBegan)
+        return [[SlideTransitionInteractionController alloc] initWithGestureRecognizer:self.gestureRecognizer edgeForDragging:edge];
+    else
+        return nil;
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.presentTargetEdge];
+    return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.presentTargetEdge transitionType:self.transitionType];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.dismissTargetEdge];
+    return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.dismissTargetEdge transitionType:self.transitionType];
 }
 
 // 当这个方法有返回的时候会默认执行这个方法，如果本来的点击按钮跳转也走这个方法，会导致动画执行不能走completion，所以如果是按钮执行，要先让这个方法返回nil

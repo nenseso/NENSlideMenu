@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <NENSlideManager.h>
+#import "MenuViewController.h"
 @interface ViewController ()
 @property (nonatomic, strong) NENSlideManager *slideManager;
 @end
@@ -17,14 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    MenuViewController *menuVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MenuViewController"];
+        NENSlideManager *slideManager = [[NENSlideManager alloc] initWithMenuController:menuVC mainController:self transitionType:SlideTransitionTypePush];
+    self.slideManager = slideManager;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UIViewController *destinationVC = segue.destinationViewController;
-    NENSlideManager *slideManager = [[NENSlideManager alloc] initWithMenuController:destinationVC mainController:self];
+//    UIViewController *destinationVC = segue.destinationViewController;
+
     // 确保它不是临时变量
-    self.slideManager = slideManager;
+    
 //    slideManager.MenuWidth = 270;
 }
 
