@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NENSlideMenu"
-  s.version      = "1.0.4"
+  s.version      = "1.4.0"
   s.summary      = "NENSlideMenu is a simple slide menu"
 
   # This description is used to generate tags and improve search results.
