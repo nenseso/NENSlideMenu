@@ -7,7 +7,7 @@
 //
 
 #import "NENSlideManager.h"
-#import "SlideTransitionDelegate.h"
+
 @interface NENSlideManager ()
 
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *presentingVCGesture;
@@ -23,14 +23,19 @@
 
 @implementation NENSlideManager
 
-- (instancetype)initWithMenuController:(UIViewController *)menuViewController mainController:(UIViewController *)mainViewController
+- (instancetype)initWithMenuController:(UIViewController *)menuViewController mainController:(UIViewController *)mainViewController transitionType:(SlideTransitionType)transitionType
 {
     self = [super init];
     if (self) {
         self.presentedViewController = menuViewController;
         self.presentingViewController = mainViewController;
-        self.transitionDelegate = [[SlideTransitionDelegate alloc] initWithPresentedViewController:self.presentedViewController presentingViewController:self.presentingViewController];
-        menuViewController.transitioningDelegate = self.transitionDelegate;
+        self.transitionType = transitionType;
+        self.transitionDelegate = [[SlideTransitionDelegate alloc] initWithPresentedViewController:self.presentedViewController presentingViewController:self.presentingViewController transitonType:transitionType];
+        if (transitionType == SlideTransitionTypeModal) {
+            menuViewController.transitioningDelegate = self.transitionDelegate;
+        } else {
+            mainViewController.navigationController.delegate = self.transitionDelegate;
+        }
         self.targetEdge = UIRectEdgeLeft;
         self.MenuWidth = [UIScreen mainScreen].bounds.size.width;
         [self addGestures];
@@ -72,7 +77,11 @@
         SlideTransitionDelegate *transitionDelegate = self.transitionDelegate;
         transitionDelegate.gestureRecognizer = sender;
         transitionDelegate.dismissTargetEdge = self.backTargetEdge;
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        if (self.transitionType == SlideTransitionTypeModal) {
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            [self.presentedViewController.navigationController popViewControllerAnimated:YES];
+        }
     }
 }
 
@@ -81,7 +90,11 @@
     if (sender.state == UIGestureRecognizerStateBegan) {
         self.transitionDelegate.gestureRecognizer = sender;
         self.transitionDelegate.presentTargetEdge = self.targetEdge;
-        [self.presentingViewController presentViewController:self.presentedViewController animated:YES completion:nil];
+        if (self.transitionType == SlideTransitionTypeModal) {
+            [self.presentingViewController presentViewController:self.presentedViewController animated:YES completion:nil];
+        } else {
+            [self.presentingViewController.navigationController pushViewController:self.presentedViewController animated:YES];
+        }
     }
 }
 

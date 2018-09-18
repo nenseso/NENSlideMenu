@@ -8,13 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, SlideTransitionType) {
+    SlideTransitionTypeModal,
+    SlideTransitionTypePush,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SlideTransitionAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
-- (instancetype)initWithTargetEdge:(UIRectEdge)targetEdge;
+- (instancetype)initWithTargetEdge:(UIRectEdge)targetEdge transitionType:(SlideTransitionType)transitionType;
 
 @property (nonatomic, readwrite) UIRectEdge targetEdge;
+
+@property (nonatomic, assign) SlideTransitionType transitionType;
 
 @end
 
