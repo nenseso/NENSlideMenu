@@ -18,6 +18,7 @@
 		7E6E04E3213E856F00276101 /* NENSlideMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04E2213E856F00276101 /* NENSlideMenuDemoTests.m */; };
 		7E6E04EE213E856F00276101 /* NENSlideMenuDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E04ED213E856F00276101 /* NENSlideMenuDemoUITests.m */; };
 		7E6E050D213E85B100276101 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E050C213E85B100276101 /* MenuViewController.m */; };
+		7ECDD82D2151DEB00086B3C1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDD82C2151DEB00086B3C1 /* TestViewController.m */; };
 		CA39E8E1B059971FD645496E /* libPods-NENSlideMenuDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A5D5569A55B1C2FFFCDF98 /* libPods-NENSlideMenuDemoUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		7E6E04EF213E856F00276101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E6E050B213E85B100276101 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		7E6E050C213E85B100276101 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		7ECDD82B2151DEB00086B3C1 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		7ECDD82C2151DEB00086B3C1 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		828046A6480DBD9EB42D3B8F /* Pods-NENSlideMenuDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NENSlideMenuDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NENSlideMenuDemoUITests/Pods-NENSlideMenuDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9A5D5569A55B1C2FFFCDF98 /* libPods-NENSlideMenuDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NENSlideMenuDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B32C20CF6016A60887B1E9 /* Pods-NENSlideMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NENSlideMenuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NENSlideMenuDemo/Pods-NENSlideMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				7E6E04CD213E856E00276101 /* ViewController.m */,
 				7E6E050B213E85B100276101 /* MenuViewController.h */,
 				7E6E050C213E85B100276101 /* MenuViewController.m */,
+				7ECDD82B2151DEB00086B3C1 /* TestViewController.h */,
+				7ECDD82C2151DEB00086B3C1 /* TestViewController.m */,
 				7E6E04CF213E856E00276101 /* Main.storyboard */,
 				7E6E04D2213E856E00276101 /* Assets.xcassets */,
 				7E6E04D4213E856E00276101 /* LaunchScreen.storyboard */,
@@ -467,6 +472,7 @@
 				7E6E04CE213E856E00276101 /* ViewController.m in Sources */,
 				7E6E04D9213E856E00276101 /* main.m in Sources */,
 				7E6E04CB213E856E00276101 /* AppDelegate.m in Sources */,
+				7ECDD82D2151DEB00086B3C1 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

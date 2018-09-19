@@ -7,7 +7,7 @@
 //
 
 #import "MenuViewController.h"
-
+#import "TestViewController.h"
 @interface MenuViewController ()
 
 @end
@@ -20,5 +20,9 @@
 
 }
 
+- (IBAction)btnAction:(id)sender {
+    TestViewController *test = [[TestViewController alloc] init];
+    [self.navigationController pushViewController:test animated:YES];
+}
 
 @end

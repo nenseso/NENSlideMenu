@@ -39,10 +39,12 @@
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
     self.operation = operation;
-    if (operation == UINavigationControllerOperationPush) {
-        return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.presentTargetEdge transitionType:self.transitionType];
-    } else if (operation == UINavigationControllerOperationPop) {
-        return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.dismissTargetEdge transitionType:self.transitionType];
+    if ( ([fromVC isKindOfClass:self.presentingViewController.class] && [toVC isKindOfClass:self.presentedViewController.class]) || ([toVC isKindOfClass:self.presentingViewController.class] && [fromVC isKindOfClass:self.presentedViewController.class]) ) {
+        if (operation == UINavigationControllerOperationPush) {
+            return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.presentTargetEdge transitionType:self.transitionType];
+        } else if (operation == UINavigationControllerOperationPop) {
+            return [[SlideTransitionAnimator alloc] initWithTargetEdge:self.dismissTargetEdge transitionType:self.transitionType];
+        }
     }
     return nil;
 }

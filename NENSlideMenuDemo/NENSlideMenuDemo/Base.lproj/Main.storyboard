@@ -73,6 +73,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YCg-1s-M8B">
+                            <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="btnAction:" destination="TFt-L7-997" eventType="touchUpInside" id="8id-xk-izR"/>
+                            </connections>
+                        </button>
                         <sections>
                             <tableViewSection id="Buh-Rn-1y0">
                                 <cells>
@@ -141,9 +149,6 @@
                                                 <constraint firstItem="0JB-W9-B3g" firstAttribute="centerY" secondItem="VJL-5D-CAS" secondAttribute="centerY" id="GdV-sk-2vS"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="pBl-iV-TeF" kind="unwind" unwindAction="unwindSegue:" id="ikt-sj-ySe"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -153,6 +158,8 @@
                             <outlet property="delegate" destination="TFt-L7-997" id="A80-6g-KIE"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9h-Ow-ypd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
