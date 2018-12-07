@@ -38,6 +38,7 @@
         }
         self.targetEdge = UIRectEdgeLeft;
         self.MenuWidth = [UIScreen mainScreen].bounds.size.width;
+        self.MenuHeight = [UIScreen mainScreen].bounds.size.height;
         [self addGestures];
     }
     return self;
@@ -59,6 +60,18 @@
 {
     _MenuWidth = MenuWidth;
     self.presentedViewController.preferredContentSize = CGSizeMake(MenuWidth, self.presentedViewController.view.bounds.size.height);
+}
+
+- (void)setMenuHeight:(CGFloat)MenuHeight
+{
+    _MenuHeight = MenuHeight;
+    self.presentedViewController.preferredContentSize = CGSizeMake(self.presentedViewController.view.bounds.size.width, MenuHeight);
+}
+
+- (void)setMenuRadius:(CGFloat)menuRadius
+{
+    _menuRadius = menuRadius;
+    self.transitionDelegate.menuRadius = menuRadius;
 }
 
 - (void)setTargetEdge:(UIRectEdge)targetEdge

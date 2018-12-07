@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SlideCustomPresentationController : UIPresentationController
 
 @property (nonatomic, readwrite) UIRectEdge targetEdge;
+@property (nonatomic, assign) CGFloat menuRadius;
 
 @end
 

@@ -18,18 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    MenuViewController *menuVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MenuViewController"];
-        NENSlideManager *slideManager = [[NENSlideManager alloc] initWithMenuController:menuVC mainController:self transitionType:SlideTransitionTypePush];
-    self.slideManager = slideManager;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    UIViewController *destinationVC = segue.destinationViewController;
-
-    // 确保它不是临时变量
-    
-//    slideManager.MenuWidth = 270;
+    UIViewController *destinationVC = segue.destinationViewController;
+    // create a gloable instance of the slideManager.
+    self.slideManager = [[NENSlideManager alloc] initWithMenuController:destinationVC mainController:self transitionType:SlideTransitionTypeModal];
+    // set the menu width or height
+    self.slideManager.MenuHeight = 600;
+//    self.slideManager.MenuWidth = 270;
+    // set the menu entry of the screen
+    self.slideManager.targetEdge = UIRectEdgeBottom;
+    self.slideManager.menuRadius = 16;
 }
 
 - (IBAction)unwindSegue:(UIStoryboardSegue *)sender{

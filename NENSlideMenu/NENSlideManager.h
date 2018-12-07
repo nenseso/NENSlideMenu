@@ -14,12 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithMenuController:(UIViewController *)menuViewController mainController:(UIViewController *)mainViewController transitionType:(SlideTransitionType)transitionType;
 
-// Menu出来的位置,默认是UIRectEdgeLeft
+// Menu original entries place,default is UIRectEdgeLeft
 @property (nonatomic, readwrite) UIRectEdge targetEdge;
-// Menu的宽度,默认是屏幕宽度
+// Menu controller width, default is screen width
 @property (nonatomic, readwrite) CGFloat MenuWidth;
+// Menu controller height, default is screen height
+@property (nonatomic, readwrite) CGFloat MenuHeight;
 
 @property (nonatomic, assign) SlideTransitionType transitionType;
+
+// if the menu entry is bottom, set this property to let the menu controller have Upper left corner and upper right corner fillet
+@property (nonatomic, readwrite) CGFloat menuRadius;
 
 @end
 

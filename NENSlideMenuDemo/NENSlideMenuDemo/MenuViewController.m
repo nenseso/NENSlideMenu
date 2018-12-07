@@ -21,8 +21,15 @@
 }
 
 - (IBAction)btnAction:(id)sender {
+    /*
     TestViewController *test = [[TestViewController alloc] init];
     [self.navigationController pushViewController:test animated:YES];
+     */
+}
+
+- (void)dealloc
+{
+    NSLog(@"111");
 }
 
 @end

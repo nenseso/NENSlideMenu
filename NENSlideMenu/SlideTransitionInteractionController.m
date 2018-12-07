@@ -85,10 +85,11 @@
             return locationInSourceView.y / height;
         else
             return 0.f;
-    } else { // pan gesture
+    } else { // back pan gesture
         UIPanGestureRecognizer *panGes = (UIPanGestureRecognizer *)gesture;
         CGPoint translation = [panGes translationInView:transitionContainerView];
         CGFloat translationX = translation.x;
+        CGFloat translationY = translation.y;
         if (self.edge == UIRectEdgeLeft) {
             if (translationX < 0) {
                 return 0.f;
@@ -101,8 +102,18 @@
             } else {
                 return fabs(translationX)  / width;
             }
+        } else if (self.edge == UIRectEdgeTop){
+            if (translationY < 0) {
+                return 0.f;
+            } else {
+                return fabs(translationY) / height;
+            }
         } else {
-            return 0.f;
+            if (translationY > 0) {
+                return 0.f;
+            } else {
+                return fabs(translationY) / height;
+            }
         }
     }
 }

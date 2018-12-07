@@ -46,8 +46,16 @@
         toView = toViewController.view;
     }
     
-    CGRect fromFrame = [transitionContext initialFrameForViewController:fromViewController];
-    CGRect toFrame = [transitionContext finalFrameForViewController:toViewController];
+    // This will be the current frame of fromViewController.view.
+    CGRect __unused fromViewInitialFrame = [transitionContext initialFrameForViewController:fromViewController];
+    // For a presentation which removes the presenter's view, this will be
+    // CGRectZero.  Otherwise, the current frame of fromViewController.view.
+    CGRect __unused fromViewFinalFrame = [transitionContext finalFrameForViewController:fromViewController];
+    // This will be CGRectZero.
+    CGRect toViewInitialFrame = [transitionContext initialFrameForViewController:toViewController];
+    // For a presentation, this will be the value returned from the
+    // presentation controller's -frameOfPresentedViewInContainerView method.
+    CGRect toViewFinalFrame = [transitionContext finalFrameForViewController:toViewController];
     
     CGVector offset = CGVectorMake(0, 0);
     if (self.targetEdge == UIRectEdgeTop)
@@ -66,12 +74,12 @@
         BOOL isPresenting = (toViewController.presentingViewController == fromViewController);
         if (isPresenting) {
             // For a presentation, the toView starts off-screen and slides in.
-            fromView.frame = fromFrame;
-            toView.frame = CGRectOffset(toFrame, toFrame.size.width * offset.dx * -1,
-                                        toFrame.size.height * offset.dy * -1);
+            fromView.frame = fromViewInitialFrame;
+            toView.frame = CGRectOffset(toViewFinalFrame, toViewFinalFrame.size.width * offset.dx * -1,
+                                        toViewFinalFrame.size.height * offset.dy * -1);
         } else {
-            fromView.frame = fromFrame;
-            toView.frame = toFrame;
+//            fromView.frame = fromViewInitialFrame;
+            toView.frame = toViewInitialFrame;
         }
         
         if (isPresenting)
@@ -82,11 +90,11 @@
         
         [UIView animateWithDuration:transitionDuration animations:^{
             if (isPresenting) {
-                toView.frame = toFrame;
+                toView.frame = toViewFinalFrame;
             } else {
                 // For a dismissal, the fromView slides off the screen.
-                fromView.frame = CGRectOffset(fromFrame, fromFrame.size.width * offset.dx,
-                                              fromFrame.size.height * offset.dy);
+                fromView.frame = CGRectOffset(fromView.frame, fromView.frame.size.width * offset.dx,
+                                              fromView.frame.size.height * offset.dy);
             }
             
         } completion:^(BOOL finished) {
@@ -98,12 +106,12 @@
     } else {
         BOOL isPush = ([toViewController.navigationController.viewControllers indexOfObject:toViewController] > [fromViewController.navigationController.viewControllers indexOfObject:fromViewController]);
         if (isPush) {
-            fromView.frame = fromFrame;
-            toView.frame = CGRectOffset(toFrame, toFrame.size.width * offset.dx * -1,
-                                        toFrame.size.height * offset.dy * -1);
+            fromView.frame = fromViewInitialFrame;
+            toView.frame = CGRectOffset(toViewFinalFrame, toViewFinalFrame.size.width * offset.dx * -1,
+                                        toViewFinalFrame.size.height * offset.dy * -1);
         } else {
-            fromView.frame = fromFrame;
-            toView.frame = toFrame;
+            fromView.frame = fromViewInitialFrame;
+            toView.frame = toViewInitialFrame;
         }
         
         if (isPush)
@@ -114,10 +122,10 @@
         
         [UIView animateWithDuration:transitionDuration animations:^{
             if (isPush) {
-                toView.frame = toFrame;
+                toView.frame = toViewFinalFrame;
             } else {
-                fromView.frame = CGRectOffset(fromFrame, fromFrame.size.width * offset.dx,
-                                              fromFrame.size.height * offset.dy);
+                fromView.frame = CGRectOffset(fromViewInitialFrame, fromViewInitialFrame.size.width * offset.dx,
+                                              fromViewInitialFrame.size.height * offset.dy);
             }
             
         } completion:^(BOOL finished) {

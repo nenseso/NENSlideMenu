@@ -94,6 +94,7 @@
              self, presented, self.presentedViewController);
     SlideCustomPresentationController *presentationController = [[SlideCustomPresentationController alloc] initWithPresentedViewController:self.presentedViewController presentingViewController:self.presentingViewController];
     presentationController.targetEdge = self.presentTargetEdge;
+    presentationController.menuRadius = self.menuRadius;
     return presentationController;
 }
 
