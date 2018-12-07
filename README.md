@@ -26,4 +26,4 @@ self.slideManager.MenuWidth = 270;
 // self.slideManager.MenuHeight = 600;
 ```
 >  Warning
-we can do any additional work in our presentedViewController now.
+NENSlideMenu will take a strong reference to presented controller, so it can't be dealloc after it is dismissed. 
