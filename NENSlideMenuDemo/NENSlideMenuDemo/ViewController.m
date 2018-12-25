@@ -24,13 +24,13 @@
 {
     UIViewController *destinationVC = segue.destinationViewController;
     // create a gloable instance of the slideManager.
-    self.slideManager = [[NENSlideManager alloc] initWithMenuController:destinationVC mainController:self transitionType:SlideTransitionTypeModal];
+    self.slideManager = [[NENSlideManager alloc] initWithMenuController:destinationVC mainController:self transitionType:SlideTransitionTypePush];
     // set the menu width or height
-    self.slideManager.MenuHeight = 600;
-//    self.slideManager.MenuWidth = 270;
+//    self.slideManager.MenuHeight = 600;
+    self.slideManager.MenuWidth = 270;
     // set the menu entry of the screen
-    self.slideManager.targetEdge = UIRectEdgeBottom;
-    self.slideManager.menuRadius = 16;
+//    self.slideManager.targetEdge = UIRectEdgeBottom;
+//    self.slideManager.menuRadius = 16;
 }
 
 - (IBAction)unwindSegue:(UIStoryboardSegue *)sender{
