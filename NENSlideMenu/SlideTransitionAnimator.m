@@ -111,7 +111,7 @@
                                         toViewFinalFrame.size.height * offset.dy * -1);
         } else {
             fromView.frame = fromViewInitialFrame;
-            toView.frame = toViewInitialFrame;
+            toView.frame = toViewFinalFrame;
         }
         
         if (isPush)
