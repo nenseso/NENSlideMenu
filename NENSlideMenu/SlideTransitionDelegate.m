@@ -93,6 +93,7 @@
     NSAssert(self.presentedViewController == presented, @"You didn't initialize %@ with the correct presentedViewController.  Expected %@, got %@.",
              self, presented, self.presentedViewController);
     SlideCustomPresentationController *presentationController = [[SlideCustomPresentationController alloc] initWithPresentedViewController:self.presentedViewController presentingViewController:self.presentingViewController];
+    presentationController.needBlur = self.needBlur;
     presentationController.targetEdge = self.presentTargetEdge;
     presentationController.menuRadius = self.menuRadius;
     return presentationController;

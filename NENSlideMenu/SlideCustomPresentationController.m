@@ -97,12 +97,18 @@
             } completion:NULL];
         }
     } else {
-        UIBlurEffect *blurEffrct =[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-        UIVisualEffectView *dimmingView = [[UIVisualEffectView alloc]initWithEffect:blurEffrct];
+        UIView *dimmingView;
+        if (_needBlur) {
+            UIBlurEffect *blurEffrct =[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+            dimmingView = [[UIVisualEffectView alloc]initWithEffect:blurEffrct];
+        } else {
+            dimmingView = [[UIView alloc] init];
+            dimmingView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
+        }
+        self.dimmingView = dimmingView;
         dimmingView.frame = self.containerView.bounds;
         dimmingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [dimmingView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dimmingViewTapped:)]];
-        self.dimmingView = dimmingView;
         [self.containerView addSubview:dimmingView];
         
         id<UIViewControllerTransitionCoordinator> transitionCoordinator = self.presentingViewController.transitionCoordinator;

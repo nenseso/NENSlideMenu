@@ -7,8 +7,9 @@ target 'NENSlideMenuDemo' do
 
   # Pods for NENSlideMenuDemo
 
-    pod 'NENSlideMenu', '~> 1.0.0'
-    
+#    pod 'NENSlideMenu', '~> 1.0.0'
+    pod 'NENSlideMenu', :path => '../'
+
   target 'NENSlideMenuDemoTests' do
     inherit! :search_paths
     # Pods for testing

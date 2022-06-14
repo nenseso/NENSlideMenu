@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 // if the menu entry is bottom, set this property to let the menu controller have Upper left corner and upper right corner fillet
 @property (nonatomic, readwrite) CGFloat menuRadius;
 
+@property (nonatomic, assign) BOOL needBlur;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) SlideTransitionType transitionType;
 
 @property (nonatomic, assign) CGFloat menuRadius;
-
+@property (nonatomic, assign) BOOL needBlur;
 @end
 
 NS_ASSUME_NONNULL_END

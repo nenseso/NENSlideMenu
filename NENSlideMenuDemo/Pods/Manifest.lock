@@ -1,12 +1,16 @@
 PODS:
-  - NENSlideMenu (1.0.0)
+  - NENSlideMenu (1.5.4)
 
 DEPENDENCIES:
-  - NENSlideMenu (~> 1.0.0)
+  - NENSlideMenu (from `../`)
+
+EXTERNAL SOURCES:
+  NENSlideMenu:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  NENSlideMenu: c38fadde59c95d186b4017923e41985ae372c5de
+  NENSlideMenu: f9152cb74a91ed6e4f0aea2028c4ed6600a95779
 
-PODFILE CHECKSUM: 1eebd36d98a6e46c201daebedddff8a620dee859
+PODFILE CHECKSUM: 6f8ab5c76a67fda71a06c9adb9b91edfed9169f2
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.11.3

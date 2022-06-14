@@ -84,6 +84,11 @@
     self.transitionDelegate.dismissTargetEdge = self.backTargetEdge;
 }
 
+- (void)setNeedBlur:(BOOL)needBlur {
+    _needBlur = needBlur;
+    self.transitionDelegate.needBlur = needBlur;
+}
+
 - (IBAction)dismissInteractiveTransitionRecognizerAction:(UIPanGestureRecognizer *)sender
 {
     if (sender.state == UIGestureRecognizerStateBegan) {
